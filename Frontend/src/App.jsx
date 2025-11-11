@@ -1,12 +1,12 @@
 import AppRoutes from "./routes/AppRoutes"
-import Nav from "./components/Nav"
+
 const App = () => {
   return (
-    <>
-      <Nav/>
-      <AppRoutes/>
-    </>
+    <div className="min-h-screen bg-black-900 text-white flex flex-col ">
+      <AppRoutes />
+    </div>
   )
 }
 
-export default App
+export default App;
+
