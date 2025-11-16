@@ -2,6 +2,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/auth.routes");
 const chatRoutes = require('./routes/chat.routes');
+
 const cors = require('cors');
 const path = require("path");
 
@@ -21,7 +22,7 @@ app.use('/api/chat', chatRoutes);
 
 /* Serve frontend */
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
 module.exports = app;
