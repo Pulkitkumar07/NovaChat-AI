@@ -11,9 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://chat-gpt-cloneai.onrender.com",  
+    origin: 
+        'https://chat-gpt-cloneai.onrender.com',
     credentials: true
 }));
+
 
 /* Routes */
 app.use('/api/auth', authRoutes);
