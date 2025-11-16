@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
 const aiService = require('../service/ai.service')
 const messagemodel = require("../models/message.model")
-const { createMemory, queryMemory } = require('../service/Vector.service');
+const { createMemory, queryMemory } = require('../service/vector.service');
 
 
 
@@ -12,10 +12,7 @@ function initSocketServer(httpServer) {
 
 const io = new Server(httpServer, {
         cors: {
-              origin: [
-            "http://localhost:5173",
-            "https://chat-gpt-cloneai.onrender.com"
-        ],
+            origin: "http://localhost:5173",
             allowedHeaders: [ "Content-Type", "Authorization" ],
             credentials: true
         }
