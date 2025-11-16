@@ -22,7 +22,7 @@ app.use('/api/chat', chatRoutes);
 
 /* Serve frontend */
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname, '../public/dist/index.html'));
 });
 
 module.exports = app;
