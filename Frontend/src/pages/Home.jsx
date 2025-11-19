@@ -67,7 +67,7 @@ const Home = () => {
       .then((res) => dispatch(setChats(res.data.chats.reverse())))
       .catch(() => {});
 
-    const s = io("https://chat-gpt-clone-hcp6.onrender.com/api", {
+    const s = io("https://chat-gpt-clone-1-gz4v.onrender.com", {
       withCredentials: true,
       transports: ["websocket"],
     });
